@@ -15,11 +15,8 @@
     <modules>
         <module>avro-schema </module>
         <module>ui-request-service</module>
-<!--        <module>testcontainers-example</module>-->
-        <!--        <module>streams-service</module>-->
-<!--        <module>users-service</module>-->
+        <!--        <module>user-request-service</module>-->
 
-<!--        <module> break-service </module>-->
     </modules>
 
 </project>

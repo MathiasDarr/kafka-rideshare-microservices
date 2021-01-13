@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.mddarr</groupId>
-	<artifactId>containers-testing-service</artifactId>
+	<artifactId>ui-request-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>containers-testing-service</name>
+	<name>ui-request-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -82,6 +82,15 @@
 			<version>1.10.6</version>
 			<scope>compile</scope>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+			<version>7.0.4</version>
+		</dependency>
+
+
 
 
 

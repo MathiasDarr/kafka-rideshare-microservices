@@ -18,8 +18,7 @@ spring:
   jpa:
     properties:
       hibernate:
-        default_schema: users
         dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: create-drop-update
+      ddl-auto: validate
 

@@ -1,8 +1,8 @@
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroUserEventType.java
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroRide.java
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroDriverState.java
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroRideCoordinate.java
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/avro/AvroUser.java
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroRideRequest.java
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroUserEvent.java
-/data/mddarr/repositories/rideshare-kafka-services/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroDriver.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroDriver.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroRideRequest.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/avro/AvroUser.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroUserEvent.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroRide.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroUserEventType.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroRideCoordinate.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/avro-schema/target/generated-sources/org/mddarr/rides/event/dto/AvroDriverState.java

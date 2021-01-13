@@ -5,6 +5,7 @@ import lombok.*;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
@@ -14,6 +15,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
+@Table(name="users",schema = "users")
 public class UserEntity {
 
     @Id
@@ -29,9 +31,8 @@ public class UserEntity {
     private String email;
 
     @Column
-    private String password;
-
-    @Column
     private Date update_ts;
+
+
 
 }

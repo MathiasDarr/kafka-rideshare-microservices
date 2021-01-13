@@ -11,16 +11,17 @@ def create_users_schema():
     cur.execute(created_schema_statement)
     conn.commit()
 
-
+#             SET search_path TO users;
 def create_users_table():
     create_users_table = """
-            SET search_path TO users;
+
+            CREATE SCHEMA IF NOT EXISTS users;
             CREATE TABLE IF NOT EXISTS users.users(
                     userid VARCHAR(50) PRIMARY KEY,
                     first_name VARCHAR NOT NULL,
                     last_name VARCHAR NOT NULL,
                     email VARCHAR NOT NULL,
-                    UPDATE_TS timestamp NOT NULL
+                    update_ts timestamp NOT NULL
             );
     """
     cur.execute(create_users_table)
@@ -58,8 +59,8 @@ if __name__ =='__main__':
     conn = get_postgres_connection('postgresdb')
     cur = conn.cursor()
 
-    create_users_schema()
+    # create_users_schema()
     create_users_table()
     # create_users_table()
-    populate_users_table()
+    # populate_users_table()
     print("THE POSTGRES DATABASE HAS BEEN SEEDED.")

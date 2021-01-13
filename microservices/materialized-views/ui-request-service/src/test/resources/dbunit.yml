@@ -1,6 +1,0 @@
-caseInsensitiveStrategy: 'UPPERCASE'
-properties:
-  batchedStatements:  true
-  qualifiedTableNames: false
-  caseSensitiveTableNames: false
-  batchSize: 100
