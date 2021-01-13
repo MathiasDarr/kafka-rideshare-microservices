@@ -5,6 +5,7 @@ import org.mddarr.ui.request.service.models.UserEntity;
 import org.mddarr.ui.request.service.models.requests.PostUserRequest;
 import org.mddarr.ui.request.service.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
