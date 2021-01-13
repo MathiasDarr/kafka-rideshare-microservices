@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/materialized-views/avro-schema/avro-schema.iml" filepath="$PROJECT_DIR$/materialized-views/avro-schema/avro-schema.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialized-views/materialized-views.iml" filepath="$PROJECT_DIR$/materialized-views/materialized-views.iml" />
       <module fileurl="file://$PROJECT_DIR$/rideshare_microservices.iml" filepath="$PROJECT_DIR$/rideshare_microservices.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialized-views/ui-request-service/ui-request-service.iml" filepath="$PROJECT_DIR$/materialized-views/ui-request-service/ui-request-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialized-views/user-authorization-service/user-authorization-service.iml" filepath="$PROJECT_DIR$/materialized-views/user-authorization-service/user-authorization-service.iml" />
     </modules>
   </component>

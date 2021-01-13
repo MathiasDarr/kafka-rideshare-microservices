@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user-authorization-service" />
+        <module name="ui-request-service" />
         <module name="avro-schema" />
       </profile>
     </annotationProcessing>
@@ -18,7 +19,7 @@
       <module name="oath2-resource" target="11" />
       <module name="rideshare_microservices" target="11" />
       <module name="ui-request-service" target="11" />
-      <module name="user-authorization-service" target="1.8" />
+      <module name="user-authorization-service" target="11" />
       <module name="user-request-service" target="11" />
       <module name="users-security" target="11" />
     </bytecodeTargetLevel>
