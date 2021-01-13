@@ -1,6 +1,6 @@
 package org.mddarr.ui.request.service.models;
 
-public enum EnumAccountType {
-
-	CURRENT, SAVINGS
+public enum UserRole {
+	DRIVER,
+	RIDER
 }

@@ -33,6 +33,7 @@ public class UserService implements UserServiceInterface {
         user.setFirst_name(postUserRequest.getFirst_name());
         user.setLast_name(postUserRequest.getLast_name());
         user.setUserid(UUID.randomUUID().toString());
+        user.setUserid(postUserRequest.getEmail());
         user.setUpdate_ts(new Date(System.currentTimeMillis()));
         userRepository.save(user);
         return user.getUserid();

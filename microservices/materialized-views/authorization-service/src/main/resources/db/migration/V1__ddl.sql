@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS users.users(
     first_name VARCHAR NOT NULL,
     last_name VARCHAR NOT NULL,
     email VARCHAR NOT NULL,
+    password VARCHAR NOT NULL,
     update_ts timestamp NOT NULL
 );

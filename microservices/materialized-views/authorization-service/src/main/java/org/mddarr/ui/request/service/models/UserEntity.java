@@ -31,6 +31,9 @@ public class UserEntity {
     private String email;
 
     @Column
+    private String password;
+
+    @Column
     private Date update_ts;
 
 

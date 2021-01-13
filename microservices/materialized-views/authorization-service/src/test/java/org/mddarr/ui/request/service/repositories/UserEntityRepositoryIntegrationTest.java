@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mddarr.ui.request.service.AbstractIntegrationTest;
-import org.mddarr.ui.request.service.models.Account;
+
 import org.mddarr.ui.request.service.models.UserEntity;
 
 
