@@ -21,8 +21,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.web.context.WebApplicationContext;
 
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
@@ -83,6 +82,20 @@ public class AuthorizationTests {
                 .andReturn();
 
         MockHttpServletResponse mockHttpServletResponse =  result.getResponse();
+
+
+        MvcResult getAllUsersResult = mockMvc.perform(get("/api/users/all")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk()).andReturn();
+        MockHttpServletResponse getAllUsersMockHttpServletResponse =  getAllUsersResult.getResponse();
+        String jsonResponse = getAllUsersMockHttpServletResponse.getContentAsString();
+        System.out.println(jsonResponse);
+//        JsonObject jobj = new Gson().fromJson(jsonResponse, JsonObject.class);
+//        String token = jobj.get("jwt").toString();
+//        System.out.println(token);
+//
+//        System.out.println(getAllUsersResult.getResponse().toString());
+
 
 
 //        MvcResult getResponse = mockMvc.perform(post("/api/users/all")
