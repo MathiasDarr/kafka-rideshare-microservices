@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mddarr.ui.request.service.ContainersTestingServiceApplication;
 import org.mddarr.ui.request.service.models.Account;
-import org.mddarr.ui.request.service.services.AccountService;
+
 import org.mddarr.ui.request.service.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

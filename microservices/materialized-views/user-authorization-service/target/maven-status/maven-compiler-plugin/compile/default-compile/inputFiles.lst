@@ -1,0 +1,11 @@
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/util/JwtUtil.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/models/UserEntity.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/SpringSecurityJwtApplication.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/filters/JwtRequestFilter.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/models/AuthenticationResponse.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/models/requests/PostUserRequest.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/models/Account.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/models/AuthenticationRequest.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/models/EnumAccountType.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/models/UserRole.java
+/data/mddarr/repositories/rideshare-microservices/microservices/materialized-views/user-authorization-service/src/main/java/io/javabrains/springsecurityjwt/MyUserDetailsService.java
