@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="complete" />
+        <module name="user-authorization-service" />
         <module name="avro-schema" />
       </profile>
     </annotationProcessing>
@@ -14,8 +14,11 @@
       <module name="avro-schema" target="1.8" />
       <module name="complete" target="1.8" />
       <module name="materialized-views" target="11" />
+      <module name="oath2-authorizer" target="11" />
+      <module name="oath2-resource" target="11" />
       <module name="rideshare_microservices" target="11" />
       <module name="ui-request-service" target="11" />
+      <module name="user-authorization-service" target="1.8" />
       <module name="user-request-service" target="11" />
       <module name="users-security" target="11" />
     </bytecodeTargetLevel>
@@ -24,7 +27,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="avro-schema" options="-parameters" />
       <module name="complete" options="-parameters" />
+      <module name="oath2-authorizer" options="-parameters" />
+      <module name="oath2-resource" options="-parameters" />
       <module name="ui-request-service" options="-parameters" />
+      <module name="user-authorization-service" options="-parameters" />
       <module name="user-request-service" options="-parameters" />
       <module name="users-security" options="-parameters" />
     </option>
