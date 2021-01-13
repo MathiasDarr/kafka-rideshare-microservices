@@ -13,7 +13,7 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<UserEntity, String> {
 
 
-    @Query(value = "SELECT * FROM users WHERE email = :email", nativeQuery = true)
+    @Query(value = "SELECT * FROM users.users WHERE email = :email", nativeQuery = true)
     Optional<UserEntity> findByEmailIgnoreCase(String email);
 
 }

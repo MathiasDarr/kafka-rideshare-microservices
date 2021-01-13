@@ -15,27 +15,34 @@ import java.util.Optional;
 @Service
 public class ApplicationUserDetails implements UserDetailsService {
 
-    @Override
-    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
-        return new User("foo", "foo",
-                new ArrayList<>());
-    }
+//    @Override
+//    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+//        return new User("foo", "foo",
+//                new ArrayList<>());
+//    }
     @Autowired
     UserRepository userRepository;
 
-//    @Override
-//    public UserDetails loadUserByUsername(String email) {
-//        Optional<UserEntity> optionalUser = userRepository.findByEmailIgnoreCase(email); //<3>
-//
+    @Override
+    public UserDetails loadUserByUsername(String email) {
+        Optional<UserEntity> optionalUser = userRepository.findByEmailIgnoreCase(email); //<3>
+
+        if (optionalUser.isPresent()) {
+            UserEntity foundUser = optionalUser.get();
+            return new User(foundUser.getEmail(), foundUser.getPassword(), new ArrayList<>());
+        }else{
+            throw new UsernameNotFoundException(String.format("User with email %s could not be found", email));
+        }
+    }
 //        if (optionalUser.isPresent()) {
 //            return new ApplicationUserDetails();
 //        } else {
 //            throw new UsernameNotFoundException(String.format("User with email %s could not be found", email));
 //        }
-//
-////                .orElseThrow(() -> new UsernameNotFoundException( //<4>
-////                        String.format("User with email %s could not be found", email)));
-//
-//
-//    }
+
+//                .orElseThrow(() -> new UsernameNotFoundException( //<4>
+//                        String.format("User with email %s could not be found", email)));
+
+
+
 }
