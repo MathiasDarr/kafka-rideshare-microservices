@@ -38,6 +38,13 @@ public class UsersController {
         return "Hello World";
     }
 
+
+    @GetMapping(value = "/api/users/all")
+    public List<UserEntity> getAllUsers(){
+        return userService.getUsers();
+    }
+
+
     @GetMapping(value="/api/users/{userid}")
     public List<UserEntity> getUserDetail(String userid){
         return userService.getUserById(userid);

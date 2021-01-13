@@ -84,13 +84,23 @@ public class AuthorizationTests {
 
         MockHttpServletResponse mockHttpServletResponse =  result.getResponse();
 
-        MvcResult trickydick = mockMvc.perform(post("/api/authenticate")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("{ \"username\": \"cdick@gmail.com\", \"password\": \"password\"}")
-                .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andReturn();
 
+//        MvcResult getResponse = mockMvc.perform(post("/api/users/all")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andReturn();
+//
+//        String getUsersResponse = getResponse.getResponse().getContentAsString();
+//
+//        JsonObject jobj = new Gson().fromJson(getUsersResponse, JsonObject.class);
+//        System.out.println(jobj);
+
+        //        MvcResult trickydick = mockMvc.perform(post("/api/authenticate")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content("{ \"username\": \"cdick@gmail.com\", \"password\": \"password\"}")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andReturn();
 
 
 

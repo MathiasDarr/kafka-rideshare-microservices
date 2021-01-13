@@ -50,7 +50,7 @@ public class UsersApiTest {
 
         mockMvc.perform(put("/api/users")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{ \"email\": \"SAVINGS\", \"first_name\": \"Jordan\", \"last_name\": \"Pence\"  }")
+                .content("{ \"email\": \"SAVINGS\", \"first_name\": \"Jordan\", \"last_name\": \"Pence\",\"password\": \"password\"  }")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
     }

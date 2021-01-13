@@ -18,6 +18,10 @@ public class UserService implements UserServiceInterface {
     @Autowired
     UserRepository userRepository;
 
+    public List<UserEntity> getUsers(){
+        return userRepository.findAll();
+    }
+
     @Override
     public List<UserEntity> getUserById(String userid) {
         List<UserEntity> userOptional = userRepository.findAll();
