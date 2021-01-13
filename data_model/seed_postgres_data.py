@@ -16,8 +16,6 @@ def create_users_schema():
                     update_ts timestamp NOT NULL
             );
     """
-
-
     cur.execute(created_schema_statement)
     conn.commit()
     cur.execute(create_users_table)

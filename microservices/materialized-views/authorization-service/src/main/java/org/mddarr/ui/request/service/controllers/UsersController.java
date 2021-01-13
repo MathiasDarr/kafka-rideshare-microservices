@@ -38,13 +38,10 @@ public class UsersController {
         return "Hello World";
     }
 
-
     @GetMapping(value="/api/users/{userid}")
     public List<UserEntity> getUserDetail(String userid){
         return userService.getUserById(userid);
     }
-
-
 
     @PutMapping(value = "/api/users")
     public String postUser(@RequestBody  PostUserRequest postUserRequest){
@@ -70,8 +67,5 @@ public class UsersController {
 
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }
-
-
-
 
 }
