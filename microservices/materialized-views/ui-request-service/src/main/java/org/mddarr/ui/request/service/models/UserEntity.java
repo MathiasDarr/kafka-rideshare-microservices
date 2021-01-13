@@ -2,11 +2,11 @@ package org.mddarr.ui.request.service.models;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.UUID;
 
 @Entity
 @Data
@@ -31,7 +31,25 @@ public class UserEntity {
     private String email;
 
     @Column
+    private String password;
+
+    @Column
     private Date update_ts;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @Enumerated(EnumType.STRING)
+    private Set<UserRole> roles;
+
+    public static UserEntity createDriver(String first_name, String last_name, String email, String encodedPassword) {
+        Set<UserRole> roles = new HashSet<>();
+        roles.add(UserRole.DRIVER);
+        return new UserEntity(UUID.randomUUID().toString(), first_name, last_name, email, encodedPassword, new Date(System.currentTimeMillis()), roles);
+    }
+    public static UserEntity createRider(String first_name, String last_name, String email, String encodedPassword){
+        Set<UserRole> roles = new HashSet<>();
+        roles.add(UserRole.RIDER);
+        return new UserEntity(UUID.randomUUID().toString(), first_name, last_name,email,encodedPassword ,new Date(System.currentTimeMillis()),roles);
+    }
 
 
 

@@ -24,4 +24,8 @@ public class SecurityConfiguration {
     public void setMobileAppClientSecret(String mobileAppClientSecret) {
         this.mobileAppClientSecret = mobileAppClientSecret;
     }
+
+
+
+
 }

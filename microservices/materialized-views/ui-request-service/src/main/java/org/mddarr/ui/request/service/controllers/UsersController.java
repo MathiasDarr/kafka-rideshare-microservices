@@ -17,12 +17,12 @@ public class UsersController {
     @Autowired
     UserService userService;
 
-    @GetMapping(value="/users/{userid}")
+    @GetMapping(value="/api/users/{userid}")
     public List<UserEntity> getUserDetail(String userid){
         return userService.getUserById(userid);
     }
 
-    @PutMapping(value = "/users")
+    @PutMapping(value = "/api/users")
     public String postUser(@RequestBody  PostUserRequest postUserRequest){
         return userService.postUser(postUserRequest);
     }
