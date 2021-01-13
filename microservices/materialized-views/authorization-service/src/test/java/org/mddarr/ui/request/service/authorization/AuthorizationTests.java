@@ -64,7 +64,53 @@ public class AuthorizationTests {
         String token = jobj.get("jwt").toString();
         System.out.println(token);
 
+    }
+
+    @Test
+    public void should_create_user_and_login() throws Exception {
+
+        final String EMAIL = "useremail@gmail.com";
+        final String PASSWORD = "password";
+        final String firstname = "Charles";
+        final String lastname = "Andrews";
+
+
+        MvcResult result = mockMvc.perform(put("/api/users")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{ \"email\": \"useremail@gmail.com\", \"first_name\": \"Charles\", \"last_name\": \"Andrews\",\"password\": \"password\"  }")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        MockHttpServletResponse mockHttpServletResponse =  result.getResponse();
+
+        MvcResult trickydick = mockMvc.perform(post("/api/authenticate")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{ \"username\": \"cdick@gmail.com\", \"password\": \"password\"}")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andReturn();
+
+
+
+
+
+//        MvcResult authenticationResult = mockMvc.perform(post("/api/authenticate")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content("{ \"username\": \"useremail@gmail.com\", \"password\": \"password\"}")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isOk())
+//                .andReturn();
+//        MockHttpServletResponse mockHttpServletAuthenticationResponse =  authenticationResult.getResponse();
+//
+//        String jsonResponse = mockHttpServletAuthenticationResponse.getContentAsString();
+//
+//        JsonObject jobj = new Gson().fromJson(jsonResponse, JsonObject.class);
+//        String token = jobj.get("jwt").toString();
+//        System.out.println(token);
 
     }
+
+
 
 }
