@@ -8,6 +8,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mddarr.ui.request.service.ContainersTestingServiceApplication;
 import org.mddarr.ui.request.service.models.Account;
 import org.mddarr.ui.request.service.services.AccountService;
+import org.mddarr.ui.request.service.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -18,6 +19,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -34,8 +36,10 @@ public class UsersApiTest {
     @Autowired
     private WebApplicationContext webApplicationContext;
 
+
+
     @MockBean
-    private AccountService accountServiceMock;
+    UserService userService;
 
     @BeforeEach
     public void setUp() {
@@ -43,20 +47,35 @@ public class UsersApiTest {
     }
 
     @Test
-    public void should_CreateAccount_When_ValidRequest() throws Exception {
+    public void should_post_user() throws Exception {
 
-        when(accountServiceMock.createAccount(any(Account.class))).thenReturn(12345L);
-
-        mockMvc.perform(post("/api/account")
+        mockMvc.perform(put("/users")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content("{ \"accountType\": \"SAVINGS\", \"balance\": 5000.0 }")
+                .content("{ \"email\": \"SAVINGS\", \"first_name\": \"Jordan\", \"last_name\": \"Pence\"  }")
                 .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isCreated())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(header().string("Location", "/api/account/12345"))
-                .andExpect(jsonPath("$.accountId").value("12345"))
-                .andExpect(jsonPath("$.accountType").value("SAVINGS"))
-                .andExpect(jsonPath("$.balance").value(5000));
+                .andExpect(status().isOk());
+
+
     }
+
+
+//    @MockBean
+//    private AccountService accountServiceMock;
+
+//    public void should_create_account() throws Exception{     
+//
+//        when(accountServiceMock.createAccount(any(Account.class))).thenReturn(12345L);
+//
+//        mockMvc.perform(post("/api/account")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content("{ \"accountType\": \"SAVINGS\", \"balance\": 5000.0 }")
+//                .accept(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isCreated())
+//                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(header().string("Location", "/api/account/12345"))
+//                .andExpect(jsonPath("$.accountId").value("12345"))
+//                .andExpect(jsonPath("$.accountType").value("SAVINGS"))
+//                .andExpect(jsonPath("$.balance").value(5000));
+//    }
 
 }
