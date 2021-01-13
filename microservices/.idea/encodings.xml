@@ -2,7 +2,7 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/materialized-views/authorization-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/materialized-views/ui-request-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/materialized-views/user-request-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/materialized-views/oauth2-authserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/materialized-views/oauth2-resource/src/main/java" charset="UTF-8" />
   </component>
 </project>

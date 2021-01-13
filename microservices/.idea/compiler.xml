@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="authorization-service" />
+        <module name="oauth2-resource" />
         <module name="avro-schema" />
+        <module name="oauth2-authserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="authorization-service" target="11" />
       <module name="avro-schema" target="1.8" />
       <module name="materialized-views" target="11" />
+      <module name="oauth2-authserver" target="1.8" />
+      <module name="oauth2-resource" target="1.8" />
       <module name="rideshare_microservices" target="11" />
       <module name="user-request-service" target="11" />
     </bytecodeTargetLevel>

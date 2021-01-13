@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/materialized-views/authorization-service/authorization-service.iml" filepath="$PROJECT_DIR$/materialized-views/authorization-service/authorization-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialized-views/avro-schema/avro-schema.iml" filepath="$PROJECT_DIR$/materialized-views/avro-schema/avro-schema.iml" />
       <module fileurl="file://$PROJECT_DIR$/materialized-views/materialized-views.iml" filepath="$PROJECT_DIR$/materialized-views/materialized-views.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialized-views/oauth2-authserver/oauth2-authserver.iml" filepath="$PROJECT_DIR$/materialized-views/oauth2-authserver/oauth2-authserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/materialized-views/oauth2-resource/oauth2-resource.iml" filepath="$PROJECT_DIR$/materialized-views/oauth2-resource/oauth2-resource.iml" />
       <module fileurl="file://$PROJECT_DIR$/rideshare_microservices.iml" filepath="$PROJECT_DIR$/rideshare_microservices.iml" />
     </modules>
   </component>

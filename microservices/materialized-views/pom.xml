@@ -14,7 +14,10 @@
 
     <modules>
         <module>avro-schema </module>
-        <module>authorization-service</module>
+<!--        <module>authorization-service</module>-->
+        <module>oauth2-authserver</module>
+        <module>oauth2-resource</module>
+<!--        <module>authorization-service</module>-->
         <!--        <module>ui-request-service</module>-->
         <!--        <module>user-request-service</module>-->
 
