@@ -6,22 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ui-request-service" />
+        <module name="authorization-service" />
         <module name="avro-schema" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="authorization-service" target="11" />
       <module name="avro-schema" target="1.8" />
       <module name="materialized-views" target="11" />
       <module name="rideshare_microservices" target="11" />
-      <module name="ui-request-service" target="11" />
       <module name="user-request-service" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="authorization-service" options="-parameters" />
       <module name="avro-schema" options="-parameters" />
-      <module name="ui-request-service" options="-parameters" />
       <module name="user-request-service" options="-parameters" />
     </option>
   </component>

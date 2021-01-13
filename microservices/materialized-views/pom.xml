@@ -14,7 +14,8 @@
 
     <modules>
         <module>avro-schema </module>
-        <module>ui-request-service</module>
+        <module>authorization-service</module>
+        <!--        <module>ui-request-service</module>-->
         <!--        <module>user-request-service</module>-->
 
     </modules>
