@@ -1,7 +1,7 @@
 package org.mddarr.ui.request.service.controllers;
 
-import lombok.Getter;
-import org.mddarr.ui.request.service.MyUserDetailsService;
+
+import org.mddarr.ui.request.service.security.ApplicationUserDetails;
 import org.mddarr.ui.request.service.models.AuthenticationRequest;
 import org.mddarr.ui.request.service.models.AuthenticationResponse;
 import org.mddarr.ui.request.service.models.UserEntity;
@@ -31,7 +31,7 @@ public class UsersController {
     private JwtUtil jwtTokenUtil;
 
     @Autowired
-    private MyUserDetailsService userDetailsService;
+    private ApplicationUserDetails userDetailsService;
 
     @GetMapping("/api/hello" )
     public String firstPage() {

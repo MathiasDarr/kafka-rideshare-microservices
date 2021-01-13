@@ -53,9 +53,12 @@ public class UsersApiTest {
                 .content("{ \"email\": \"SAVINGS\", \"first_name\": \"Jordan\", \"last_name\": \"Pence\"  }")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
-
-
     }
+
+
+
+
+
 
 
 //    @MockBean

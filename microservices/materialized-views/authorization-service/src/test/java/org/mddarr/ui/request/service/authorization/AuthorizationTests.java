@@ -4,8 +4,9 @@ package org.mddarr.ui.request.service.authorization;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mddarr.ui.request.service.security.ApplicationUserDetails;
 import org.mddarr.ui.request.service.ContainersTestingServiceApplication;
-import org.mddarr.ui.request.service.MyUserDetailsService;
+
 import org.mddarr.ui.request.service.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -32,7 +33,7 @@ public class AuthorizationTests {
 
 
     @Autowired
-    MyUserDetailsService myUserDetailsService;
+    ApplicationUserDetails applicationUserDetails;
 
     @MockBean
     UserService userService;
@@ -43,7 +44,7 @@ public class AuthorizationTests {
     }
 
     @Test
-    public void should_post_user() throws Exception {
+    public void should_authenticate() throws Exception {
 
         mockMvc.perform(post("/api/authenticate")
                 .contentType(MediaType.APPLICATION_JSON)

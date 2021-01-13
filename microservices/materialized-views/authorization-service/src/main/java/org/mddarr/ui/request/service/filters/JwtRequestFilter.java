@@ -1,6 +1,7 @@
 package org.mddarr.ui.request.service.filters;
 
-import org.mddarr.ui.request.service.MyUserDetailsService;
+import org.mddarr.ui.request.service.security.ApplicationUserDetails;
+
 import org.mddarr.ui.request.service.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -20,7 +21,7 @@ import java.io.IOException;
 public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Autowired
-    private MyUserDetailsService userDetailsService;
+    private ApplicationUserDetails userDetailsService;
 
     @Autowired
     private JwtUtil jwtUtil;
