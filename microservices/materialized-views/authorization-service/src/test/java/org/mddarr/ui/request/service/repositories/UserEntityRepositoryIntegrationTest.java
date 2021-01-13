@@ -38,6 +38,8 @@ public class UserEntityRepositoryIntegrationTest extends AbstractIntegrationTest
         userEntity.setFirst_name("Charles");
         userEntity.setLast_name("Goodwin");
         userEntity.setEmail("cgoodwin@gmail.com");
+        userEntity.setPassword("password");
+
         userEntity.setUpdate_ts(new Date(System.currentTimeMillis()));
 
         UserEntity userEntity2 = new UserEntity();
@@ -47,6 +49,7 @@ public class UserEntityRepositoryIntegrationTest extends AbstractIntegrationTest
         userEntity2.setFirst_name("Erik");
         userEntity2.setLast_name("Baldwin");
         userEntity2.setEmail("cadhar@gmail.com");
+        userEntity2.setPassword("password");
         userEntity2.setUpdate_ts(new Date(System.currentTimeMillis()));
 
         userRepository.save(userEntity);
@@ -55,7 +58,6 @@ public class UserEntityRepositoryIntegrationTest extends AbstractIntegrationTest
         List<UserEntity> allUsers = userRepository.findAll();
 
         assertThat(allUsers).isNotEmpty();
-        assertThat(allUsers).hasSize(2);
 
         Optional<UserEntity> optionalUserEntity = userRepository.findById(userid1);
         Assertions.assertTrue(optionalUserEntity.isPresent());

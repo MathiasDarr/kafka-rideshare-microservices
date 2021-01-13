@@ -64,21 +64,6 @@ public class AuthorizationTests {
         String token = jobj.get("jwt").toString();
         System.out.println(token);
 
-//        JsonElement jelement = new JsonParser().parse(jsonResponse);
-//
-//        System.out.println(jelement);
-//
-//        System.out.println(jelement.get("jwt"));
-//        JsonObject jobject = jelement.getAsJsonObject();
-//        jobject = jobject.getAsJsonObject("jwt");
-//        JsonArray jarray = jobject.getAsJsonArray("translations");
-//        jobject = jarray.get(0).getAsJsonObject();
-//        String parsed_json = jobject.get("translatedText").getAsString();
-
-
-//        System.out.println(mockHttpServletResponse.getContentAsString());
-//
-//        System.out.println("THE PARSED JSON IS " + jobject.getAsString());
 
     }
 
