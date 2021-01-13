@@ -7,3 +7,4 @@ CREATE TABLE IF NOT EXISTS users.users(
     password VARCHAR NOT NULL,
     update_ts timestamp NOT NULL
 );
+
